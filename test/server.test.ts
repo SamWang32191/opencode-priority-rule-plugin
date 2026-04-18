@@ -140,6 +140,10 @@ afterEach(async () => {
 });
 
 describe("server plugin", () => {
+  it("formats priority rules as a single line", () => {
+    expect(PRIORITY_RULES).not.toContain("\n");
+  });
+
   it("injects the priority rules before the first user part", async () => {
     process.env.OPENCODE_CONFIG_DIR = await trackTempDir("server-config-");
     const transform = await createTransform();

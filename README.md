@@ -3,10 +3,7 @@
 Priority-rules server plugin for OpenCode. It injects the following block into the first user message:
 
 ```xml
-<PriorityRules>
-- ALWAYS use the QUESTION TOOL if you need to ask user.
-- ALWAYS think and respond in Traditional Chinese (zh_TW)
-</PriorityRules>
+<PriorityRules> ALWAYS use the QUESTION TOOL if you need to ask user. ALWAYS think and respond in Traditional Chinese (zh_TW). </PriorityRules>
 ```
 
 Compatible with OpenCode `>=1.4.6 <2`.
