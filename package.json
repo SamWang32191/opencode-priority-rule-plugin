@@ -1,0 +1,42 @@
+{
+  "name": "opencode-priority-rule-plugin",
+  "version": "0.1.0",
+  "description": "Priority-rules server plugin for OpenCode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamWang32191/opencode-priority-rule-plugin"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/server.js",
+  "exports": {
+    "./server": "./dist/server.js",
+    "./tui": "./dist/tui.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "opencode": ">=1.4.6 <2"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit && node ./scripts/build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit"
+  },
+  "dependencies": {
+    "@opentui/solid": "0.1.99",
+    "solid-js": "1.9.11"
+  },
+  "devDependencies": {
+    "@babel/core": "7.28.0",
+    "@babel/preset-typescript": "7.27.1",
+    "@opencode-ai/plugin": "^1.4.7",
+    "@types/node": "^25.6.0",
+    "babel-preset-solid": "1.9.10",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
